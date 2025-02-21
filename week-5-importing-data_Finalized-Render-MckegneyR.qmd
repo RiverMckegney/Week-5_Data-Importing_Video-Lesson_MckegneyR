@@ -11,6 +11,8 @@ execute:
 #| include: false
 # note that readxl is installed with the tidyverse, but it is not loaded as a core package
 library(tidyverse)
+
+# readr is already contained as a pre-loaded core-package within the tidyverse package
 ```
 
 
@@ -56,7 +58,7 @@ Save `nimbus.csv` into your project folder on your computer. Then read it into a
 
 ```{r}
 #| label: read-nimbus
-nimbus <- read_csv("nimbus.csv")
+nimbus <- read_csv("Data/nimbus.csv")
 ```
 
 Notice that the code above saves the output to an object named nimbus. You must save the output of `read_csv()` to an object if you wish to use it later. If you do not save the output, `read_csv()` will merely print the contents of the data set at the command line.
@@ -268,3 +270,8 @@ httr     | web API's
 rvest    | web pages (web scraping)
 DBI      | databases
 sparklyr | data loaded into spark
+
+
+## Works Cited
+1. Müller K, Wickham H (2024). tibble: Simple Data Frames. R package version 3.2.1, https://github.com/tidyverse/tibble, <https://tibble.tidyverse.org/>.
+
