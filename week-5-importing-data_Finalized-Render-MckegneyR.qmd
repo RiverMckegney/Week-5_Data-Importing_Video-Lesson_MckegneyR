@@ -274,4 +274,10 @@ sparklyr | data loaded into spark
 
 ## Works Cited
 1. Müller K, Wickham H (2024). tibble: Simple Data Frames. R package version 3.2.1, https://github.com/tidyverse/tibble, <https://tibble.tidyverse.org/>.
-
+2. Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund
+  G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM,
+  Müller K, Ooms J, Robinson D, Seidel DP, Spinu V, Takahashi K, Vaughan D,
+  Wilke C, Woo K, Yutani H (2019). “Welcome to the tidyverse.” _Journal of
+  Open Source Software_, *4*(43), 1686. doi:10.21105/joss.01686
+  <https://doi.org/10.21105/joss.01686>.
+3. 
