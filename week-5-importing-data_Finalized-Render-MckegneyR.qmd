@@ -238,7 +238,7 @@ The `janitor` package can help you clean up the names of your variables to make 
 #install.packages("janitor")
 gsw <- janitor::clean_names(gsw)
 
-write_csv(_______, file = "________.csv")
+write_csv(gsw, file = "Worked_Data/gsw_worked.csv")
 ```
 
 
@@ -256,10 +256,24 @@ In situations where there is a lot of missing data, it can be helpful to see tho
 Let's use the built-in dataset `airquality`. First plot using `geom_point()`. Notice warning. Now change `geom_point()` to `geom_miss_point()`.  
 
 ```{r}
+# Original plot
 ggplot(data = airquality,
        mapping = aes(x = Ozone,
                      y = Solar.R)) +
  geom_point()
+
+# Plot displaying missing data
+ggplot(data = airquality,
+       mapping = aes(x = Ozone,
+                     y = Solar.R)) +
+ geom_miss_point()
+
+# Plot w/ missing data faceted by Month (suss out where NAs are occurring)
+ggplot(data = airquality,
+       mapping = aes(x = Ozone,
+                     y = Solar.R)) +
+ geom_miss_point() +
+  facet_wrap(~Month)
 ```
 
 
@@ -283,7 +297,7 @@ DBI      | databases
 sparklyr | data loaded into spark
 
 
-## Works Cited
+## Package Citation
 1. Müller K, Wickham H (2024). tibble: Simple Data Frames. R package version 3.2.1, https://github.com/tidyverse/tibble, <https://tibble.tidyverse.org/>.
 2. Wickham H, Averick M, Bryan J, Chang W, McGowan LD, François R, Grolemund
   G, Hayes A, Henry L, Hester J, Kuhn M, Pedersen TL, Miller E, Bache SM,
@@ -291,4 +305,17 @@ sparklyr | data loaded into spark
   Wilke C, Woo K, Yutani H (2019). “Welcome to the tidyverse.” _Journal of
   Open Source Software_, *4*(43), 1686. doi:10.21105/joss.01686
   <https://doi.org/10.21105/joss.01686>.
-3. 
+3.  Brownrigg DMPfRbR, Minka TP, Bivand. ttP9cbR (2023). _mapproj: Map
+  Projections_. R package version 1.2.11,
+  <https://CRAN.R-project.org/package=mapproj>.
+4.  Becker OScbRA, Minka ARWRvbRBEbTP, Deckmyn. A (2024). _maps: Draw
+  Geographical Maps_. R package version 3.4.2.1,
+  <https://CRAN.R-project.org/package=maps>.
+5. Tierney N, Cook D (2023). “Expanding Tidy Data Principles to Facilitate
+  Missing Data Exploration, Visualization and Assessment of Imputations.”
+  _Journal of Statistical Software_, *105*(7), 1-31. doi:10.18637/jss.v105.i07
+  <https://doi.org/10.18637/jss.v105.i07>.
+6. Firke S (2024). _janitor: Simple Tools for Examining and Cleaning Dirty
+  Data_. R package version 2.2.1,
+  <https://CRAN.R-project.org/package=janitor>.
+
